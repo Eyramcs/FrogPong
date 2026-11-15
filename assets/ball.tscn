@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d3jhgnq33opsk"]
+
+[ext_resource type="Texture2D" uid="uid://cthghjewtecnk" path="res://assets/ball.png" id="1_f8axv"]
+[ext_resource type="PackedScene" uid="uid://df2a4tipbv4n5" path="res://assets/killzone.tscn" id="2_l30l0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wie3j"]
+radius = 3.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wie3j"]
+size = Vector2(138, 82)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wie3j"]
+a = Vector2(1, -129)
+b = Vector2(0, 6)
+
+[node name="ball" type="CharacterBody2D" unique_id=788703653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=337969627]
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=643977725]
+texture = ExtResource("1_f8axv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=67071917]
+shape = SubResource("CircleShape2D_wie3j")
+
+[node name="collisionwalls" type="CollisionShape2D" parent="." unique_id=31386648]
+position = Vector2(138, 0)
+shape = SubResource("RectangleShape2D_wie3j")
+
+[node name="collisionwalls4" type="CollisionShape2D" parent="." unique_id=1422433052]
+position = Vector2(0, 83)
+shape = SubResource("RectangleShape2D_wie3j")
+
+[node name="collisionwalls3" type="CollisionShape2D" parent="." unique_id=78636945]
+position = Vector2(0, -83)
+shape = SubResource("RectangleShape2D_wie3j")
+
+[node name="collisionwalls2" type="CollisionShape2D" parent="." unique_id=626543629]
+position = Vector2(-137, 0)
+shape = SubResource("RectangleShape2D_wie3j")
+
+[node name="killzone" parent="." unique_id=161058499 instance=ExtResource("2_l30l0")]
+position = Vector2(0, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1567015454]
+position = Vector2(69, -42)
+shape = SubResource("SegmentShape2D_wie3j")
+
+[node name="killzone2" parent="." unique_id=1939118931 instance=ExtResource("2_l30l0")]
+position = Vector2(-92, 49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone2" unique_id=572191199]
+position = Vector2(23, -6)
+shape = SubResource("SegmentShape2D_wie3j")

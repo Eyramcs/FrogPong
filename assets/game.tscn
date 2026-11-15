@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ct2xmfooqf3i4"]
+
+[ext_resource type="PackedScene" uid="uid://b1021yjal7ah4" path="res://assets/gorf.tscn" id="1_f3fhv"]
+[ext_resource type="PackedScene" uid="uid://c5i1ke2c1ode8" path="res://assets/floor.tscn" id="2_0aill"]
+[ext_resource type="Texture2D" uid="uid://da8fujheoj14w" path="res://assets/sprites/world_tileset.png" id="3_2ofxl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpx4e"]
+texture = ExtResource("3_2ofxl")
+
+[sub_resource type="TileSet" id="TileSet_0aill"]
+sources/0 = SubResource("TileSetAtlasSource_lpx4e")
+
+[node name="Node2D" type="Node2D" unique_id=870938928]
+
+[node name="CharacterBody2D" parent="." unique_id=2047041939 instance=ExtResource("1_f3fhv")]
+position = Vector2(27.000015, -36.999996)
+
+[node name="Node2D" parent="." unique_id=685650231 instance=ExtResource("2_0aill")]
+position = Vector2(-14, -78)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=459541850]
+tile_set = SubResource("TileSet_0aill")
