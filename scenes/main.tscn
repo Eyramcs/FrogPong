@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ccx3e1n16ct7o"]
+
+[ext_resource type="PackedScene" uid="uid://bh4osuoh222w6" path="res://scenes/frog_1.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dhrv8a66jpuxp" path="res://scenes/floor.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://battkg7fovhpm" path="res://scenes/celling.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://ckq4c2uionpln" path="res://scenes/background.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dpow3rkhwgux1" path="res://scenes/frog_2.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bestgaw2if7ma" path="res://scenes/ball.tscn" id="6_tefeu"]
+
+[node name="Main" type="Node2D" unique_id=1820590715]
+
+[node name="Frog 1" parent="." unique_id=1415749404 instance=ExtResource("1_o5qli")]
+position = Vector2(473, 299)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2038886335]
+position = Vector2(576, 322)
+zoom = Vector2(5, 5)
+
+[node name="Floor & Celling" parent="." unique_id=1324582883 instance=ExtResource("2_0wfyh")]
+position = Vector2(424, 344)
+
+[node name="Celling" parent="." unique_id=258315128 instance=ExtResource("3_sugp2")]
+position = Vector2(553, 317)
+
+[node name="Background" parent="." unique_id=662284723 instance=ExtResource("4_jyhfs")]
+position = Vector2(531, 298)
+
+[node name="Frog 2" parent="." unique_id=1344162562 instance=ExtResource("5_tbgi4")]
+position = Vector2(678, 301)
+
+[node name="ball" parent="." unique_id=1961011460 instance=ExtResource("6_tefeu")]
+position = Vector2(579, 315)
